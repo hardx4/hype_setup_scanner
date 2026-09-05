@@ -521,7 +521,15 @@ def run_scan():
             + "".join(detalhes)
         )
     else:
-        print("🟡 AGUARDAR")
+        sinal = "🟡 AGUARDAR"
+        print(sinal)
+        notify(
+            f"<b>{ASSET_NAME} SETUP SCANNER</b>\n"
+            f"{sinal}\n"
+            f"Preço: {preco} | {horario}\n"
+            f"Score ponderado BUY={buy_count} | SELL={sell_count}"
+            + "".join(detalhes)
+        )
 
     print("=================================\n")
 
